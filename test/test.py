@@ -1,4 +1,4 @@
-from syunit.unit import Meters, Seconds, Divide
+from syunit.unit import Divide, Meters, Seconds
 
 
 def test_meters_divided_by_seconds_returns_value_in_meters_per_second():
@@ -7,4 +7,4 @@ def test_meters_divided_by_seconds_returns_value_in_meters_per_second():
     expected_result = 4.0
     result = m / s
     assert float(result) == expected_result
-    assert type(result) == Divide[Meters, Seconds]
+    assert type(result) is Divide[Meters, Seconds]
